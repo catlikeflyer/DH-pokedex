@@ -1,11 +1,37 @@
 const pokedex = document.getElementById("pokedex");
 const poke = document.getElementById('pokemon')
+const btnContainer = document.getElementById('btnContainer');
 
+/**
+ * Generates buttons to filter types from types array
+ * @return {void} Renders buttons onto btnContainer class
+ */
+const showButtons = () => {
+    const types = ["normal", "fire", "water", "electric", "grass", "ice", 
+    "fighting", "poison", "ground", "flying", "psychic", "bug", 
+    "rock", "ghost", "dragon", "dark", "steel"];
+    const btnArray = []
+    
+    types.forEach(type => {
+        btnArray.push(`
+        <button class="btn" onclick="filterSelection('${type}')">${type}</button>
+        `)
+    })
+
+    btnContainer.innerHTML = `<button class="btn active" onclick="filterSelection('all')">Show all</button>
+    `+btnArray.join("");
+}
+
+/**
+ * Fetches from PokeAPI the pokemon data to be displayed
+ * @returns {void} Renders the cards with all Pokemon data
+ */
 const fetchAllPokemon = () => {
 
     const promises = [];
 
-    for (let i = 1; i <= 900; i++){
+    // Set i condition to 898 to get all pokemon up to Gen 8
+    for (let i = 1; i <= 898; i++){
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         promises.push(fetch(url).then((res) => res.json()));
         Promise.all(promises).then(results => {
@@ -13,26 +39,30 @@ const fetchAllPokemon = () => {
                 name: data.name,
                 id: data.id,
                 image: data.sprites["front_default"],
-                types: data.types.map(type => type.type.name).join(', '),
+                types: data.types.map(type => type.type.name),
             }));
             displayPokemon(pokemon);
-            console.log(pokemon.types)
         });
     };
 }
 
+/**
+ * Generates an HTML card for all the Pokemon in the object
+ * @param {object} pokemon - Pokemon object from PokeAPI
+ * @returns {void} Renders cards in unordered list with id=Pokedex
+ */
 const displayPokemon = (pokemon) => {
-    console.log(pokemon);
-
     const pokemonHTML = pokemon.map(mon => `
-    <li class="card">
+    <li class="card show ${mon.types.join(' ')}">
         <img class="card-image" src="${mon.image}"/>
         <h2 class="card-title">${mon.id}. ${mon.name}</h2>
-        <p class="card-subtitle">Types: ${mon.types}</p>
+        <p class="card-subtitle">Types: ${mon.types.join(', ')}</p>
     </li>
     `).join("");
 
     pokedex.innerHTML= pokemonHTML;
 }
 
+showButtons();
 fetchAllPokemon();
+
