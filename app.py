@@ -35,7 +35,7 @@ def pokemon(pokemon):
         return render_template('pokemon.html', **locals())
     
     except:
-        raise ReferenceError("Missing template")
+        return render_template('error.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

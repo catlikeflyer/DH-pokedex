@@ -6,7 +6,7 @@ filterSelection("all")
  */
 function filterSelection(c) {
     var x, i;
-    x = document.getElementsByClassName("card");
+    x = document.getElementsByClassName("cardi");
     if (c == "all") c = "";
     // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
     for (i = 0; i < x.length; i++) {
@@ -42,7 +42,7 @@ function removeClass(element, name) {
 
 // Add active class to the current control button (highlight it)
 //var btnContainer = document.getElementById("btnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
+var btns = btnContainer.getElementsByClassName("btni");
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
         var current = document.getElementsByClassName("active");

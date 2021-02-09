@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-color: rgb(37, 37, 37);
     margin: 0;
     font-family: 'Fredoka One', cursive;
 }
@@ -8,9 +8,30 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 40px;
+    color: whitesmoke;
+    padding: 20px;
 }
 
-.card {
+h2 {
+    color: azure;
+}
+
+h6 {
+    color: white;
+    margin: 10px;
+}
+
+.typebox {
+    text-align: center;
+}
+
+.result-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardi {
     list-style: none;
     padding: 40px;
     background-color: azure;
@@ -20,7 +41,7 @@ h1 {
     border-radius: 10px;
 }
 
-.card:hover {
+.cardi:hover {
     animation: bounce 0.5s linear;
 }
 
@@ -39,24 +60,24 @@ h1 {
     }
 }
 
-.card-title {
+.cardi-title {
     text-transform: uppercase;
     font-size: 32px;
     font-weight: normal;
     margin-bottom: 0;
 }
 
-.card-subtitle {
+.cardi-subtitle {
     font-weight: lighter;
-    color: grey;
+    color: rgb(195, 195, 195);
     margin-top: 5px;
 }
 
-.card-image {
+.cardi-image {
     height: 180px;
 }
 
-.container {
+.containeri {
     padding: 20px;
     margin: 0 auto;
 }
@@ -83,7 +104,7 @@ h1 {
   }
   
   /* Style the buttons */
-  .btn {
+  .btni {
     border: none;
     outline: none;
     padding: 12px 16px;
@@ -93,12 +114,104 @@ h1 {
   }
   
   /* Add a light grey background on mouse-over */
-  .btn:hover {
+  .btni:hover {
     background-color: rgb(97, 205, 255);
   }
   
   /* Add a dark background to the active button */
-  .btn.active {
+  .btni.active {
     background-color: rgb(101, 142, 255);
     color: white;
   }
+
+/* Colors by typing */
+.normal{
+    background-color: #A8A878; 
+    border-color: #6D6D4E;
+}
+
+.fire{
+    background-color: #F08030;
+    border-color: #9C531F;
+}
+
+.water{
+    background-color: #6890F0;
+    border-color: #445E9C;
+}
+
+.grass{
+    background-color: #78C850;
+    border-color: #4E8234;
+}
+
+.flying{
+    background-color: #A890F0;
+    border-color: #6D5E9C;
+}
+
+.fighting{
+    background-color: #C03028;
+    border-color: #7D1F1A;
+}
+
+.poison{
+    background-color: #A040A0;
+    border-color: #682A68;
+}
+
+.electric{
+    background-color: #F8D030;
+    border-color: #A1871F ;
+}
+
+.ground{
+    background-color: #E0C068;
+    border-color: #927D44;
+}
+
+.rock{
+    background-color: #B8A038;
+    border-color: #786824;
+}
+
+.psychic{
+    background-color: #F85888;
+    border-color: #A13959;
+}
+
+.ice{
+    background-color: #98D8D8;
+    border-color: #638D8D;
+}
+
+.bug{
+    background-color: #A8B820;
+    border-color: #6D7815;
+}
+
+.ghost{
+    background-color: #705898;
+    border-color: #493963;
+}
+
+.steel{
+    background-color: #B8B8D0;
+    border-color: #787887;
+}
+
+.dragon{
+    background-color: #7038F8;
+    border-color: #4924A1;
+}
+
+.dark{
+    background-color: #705848;
+    border-color: #49392F;
+}
+
+.fairy{
+    background-color: #EE99AC;
+    border-color:#9B6470;
+}
+
