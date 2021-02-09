@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="btnContainer"></div>
+    <div class="containeri">
+        <h1>DH's Pokedex</h1>
+        <ol id="pokedex">
+        </ol>
+    </div>
+    <div id="pokemon"></div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='filter.js')}}"></script>
+{% endblock %}

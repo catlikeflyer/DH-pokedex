@@ -14,11 +14,11 @@ const showButtons = () => {
     
     types.forEach(type => {
         btnArray.push(`
-        <button class="btn" onclick="filterSelection('${type}')">${type}</button>
+        <button class="btni" onclick="filterSelection('${type}')">${type}</button>
         `)
     })
 
-    btnContainer.innerHTML = `<button class="btn active" onclick="filterSelection('all')">Show all</button>
+    btnContainer.innerHTML = `<button class="btni active" onclick="filterSelection('all')">Show all</button>
     `+btnArray.join("");
 }
 
@@ -53,11 +53,13 @@ const fetchAllPokemon = () => {
  */
 const displayPokemon = (pokemon) => {
     const pokemonHTML = pokemon.map(mon => `
-    <li class="card show ${mon.types.join(' ')}">
-        <img class="card-image" src="${mon.image}"/>
-        <h2 class="card-title">${mon.id}. ${mon.name}</h2>
-        <p class="card-subtitle">Types: ${mon.types.join(', ')}</p>
+    <a href="${mon.name}" class="cardi show ${mon.types.join(' ')}">
+    <li>
+        <img class="cardi-image" src="${mon.image}"/>
+        <h2 class="cardi-title">${mon.id}. ${mon.name}</h2>
+        <p class="cardi-subtitle">Types: ${mon.types.join(', ')}</p>
     </li>
+    </a>
     `).join("");
 
     pokedex.innerHTML= pokemonHTML;

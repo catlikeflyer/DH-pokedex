@@ -1,0 +1,217 @@
+body {
+    background-color: rgb(37, 37, 37);
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+h2 {
+    color: azure;
+}
+
+h6 {
+    color: white;
+    margin: 10px;
+}
+
+.typebox {
+    text-align: center;
+}
+
+.result-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardi {
+    list-style: none;
+    padding: 40px;
+    background-color: azure;
+    color: black;
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+}
+
+.cardi:hover {
+    animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-8px);
+    }
+    40% {
+        transform: translatey(0px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+    80% {
+        transform: translatey(0px);
+    }
+}
+
+.cardi-title {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.cardi-subtitle {
+    font-weight: lighter;
+    color: rgb(195, 195, 195);
+    margin-top: 5px;
+}
+
+.cardi-image {
+    height: 180px;
+}
+
+.containeri {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#pokedex {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Styles for filter */
+
+#btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btni {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: rgb(204, 249, 253);
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btni:hover {
+    background-color: rgb(97, 205, 255);
+  }
+  
+  /* Add a dark background to the active button */
+  .btni.active {
+    background-color: rgb(101, 142, 255);
+    color: white;
+  }
+
+/* Colors by typing */
+.normal{
+    background-color: #A8A878; 
+    border-color: #6D6D4E;
+}
+
+.fire{
+    background-color: #F08030;
+    border-color: #9C531F;
+}
+
+.water{
+    background-color: #6890F0;
+    border-color: #445E9C;
+}
+
+.grass{
+    background-color: #78C850;
+    border-color: #4E8234;
+}
+
+.flying{
+    background-color: #A890F0;
+    border-color: #6D5E9C;
+}
+
+.fighting{
+    background-color: #C03028;
+    border-color: #7D1F1A;
+}
+
+.poison{
+    background-color: #A040A0;
+    border-color: #682A68;
+}
+
+.electric{
+    background-color: #F8D030;
+    border-color: #A1871F ;
+}
+
+.ground{
+    background-color: #E0C068;
+    border-color: #927D44;
+}
+
+.rock{
+    background-color: #B8A038;
+    border-color: #786824;
+}
+
+.psychic{
+    background-color: #F85888;
+    border-color: #A13959;
+}
+
+.ice{
+    background-color: #98D8D8;
+    border-color: #638D8D;
+}
+
+.bug{
+    background-color: #A8B820;
+    border-color: #6D7815;
+}
+
+.ghost{
+    background-color: #705898;
+    border-color: #493963;
+}
+
+.steel{
+    background-color: #B8B8D0;
+    border-color: #787887;
+}
+
+.dragon{
+    background-color: #7038F8;
+    border-color: #4924A1;
+}
+
+.dark{
+    background-color: #705848;
+    border-color: #49392F;
+}
+
+.fairy{
+    background-color: #EE99AC;
+    border-color:#9B6470;
+}
+

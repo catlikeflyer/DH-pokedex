@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h1>{{ mon.name.capitalize() }}</h1>
+        <div class="type-container">
+        {% for type in mon.types %}
+            <div class="typebox {{ type }}">
+                <h2 class="typetext">{{ type.capitalize() }}</h2>
+            </div>
+        {% endfor %}
+        </div>
+        <img class="result-image" src="{{ mon.image }}"/>
+        {% for stat in stats.keys() %}
+            <h6>{{ stat.capitalize() }}</h6>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped {{check_style(stat)}}" role="progressbar" style="width: {{ stringify_stats(stats[stat]) }}%" aria-valuenow="{{ stringify_stats(stats[stat]) }}" aria-valuemin="0" aria-valuemax="100">{{ stats[stat] }}</div>
+            </div>
+        {% endfor %}
+        <h2>Total: {{ total_stats }}</h2>
+    </div>
+{% endblock content %}
