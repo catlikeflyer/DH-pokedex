@@ -22,13 +22,14 @@ class Pokemon:
         self.data = load_pokemon_info(pokemon)
         self.name = self.data['species']['name']
         self.image = self.data["sprites"]["other"]["official-artwork"]["front_default"]
+        self.id = self.data['id']
 
         if len(self.data["types"]) < 2:
             self.types = [self.data["types"][0]["type"]["name"]]
         else: 
             self.types = [self.data["types"][0]["type"]["name"], self.data["types"][1]["type"]["name"]]
 
-        self.icon = self.data["sprites"]["versions"]["generation-vii"]["icons"]["front_default"] 
+        self.icon = self.data["sprites"]["front_default"] 
 
     def get_stats(self):
         """

@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(37, 37, 37);
+    background: linear-gradient(90deg,#e66465, #9198e5);
     margin: 0;
     font-family: 'Fredoka One', cursive;
 }
@@ -23,6 +23,20 @@ h6 {
 
 .typebox {
     text-align: center;
+    width: 20%;
+    min-width: 10rem;
+    border: solid;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.type-container {
+    display: flex;
+    justify-content: center;
+}
+
+.progress {
+    font-size: 18px;
 }
 
 .result-image{
@@ -69,7 +83,7 @@ h6 {
 
 .card-i-subtitle {
     font-weight: lighter;
-    color: rgb(195, 195, 195);
+    color: azure;
     margin-top: 5px;
 }
 

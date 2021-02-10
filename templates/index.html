@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% block favicon %}
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='logoblank.png') }}">
+{% endblock %}
+{% block title %}
+<title>DH's Pokedex</title>
+{% endblock %}
 {% block content %}
     <div id="btnContainer"></div>
     <div class="container-i">

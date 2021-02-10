@@ -9,8 +9,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        {% block favicon %}{% endblock %}
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-        <title>DH's Pokedex</title>
+        {% block title %}{% endblock %}
     </head>
     <body>
         {% block content %}{% endblock %}
