@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, render_template
 from pokemon import Pokemon
 
 app = Flask(__name__)
@@ -10,6 +10,10 @@ def main():
 
 @app.route("/<pokemon>")
 def pokemon(pokemon):
+    """
+    Creates a pokemon object based on the clicked pokemon on index.
+    If there is no pokemon, returns error template.
+    """
     try:
         mon = Pokemon(pokemon)
         stats = mon.get_stats()
@@ -19,6 +23,9 @@ def pokemon(pokemon):
         stringify_stats = lambda x: str(x*100//max_stat)
 
         def check_style(stat):
+            """
+            Returns a bootstrap color class depending on the stat
+            """
             if stat == "hp":
                 return "bg-secondary"
             elif stat == "attack":

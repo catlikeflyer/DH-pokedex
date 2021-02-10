@@ -31,7 +31,7 @@ h6 {
     margin-right: auto;
 }
 
-.cardi {
+.card-i {
     list-style: none;
     padding: 40px;
     background-color: azure;
@@ -41,7 +41,7 @@ h6 {
     border-radius: 10px;
 }
 
-.cardi:hover {
+.card-i:hover {
     animation: bounce 0.5s linear;
 }
 
@@ -60,24 +60,24 @@ h6 {
     }
 }
 
-.cardi-title {
+.card-i-title {
     text-transform: uppercase;
     font-size: 32px;
     font-weight: normal;
     margin-bottom: 0;
 }
 
-.cardi-subtitle {
+.card-i-subtitle {
     font-weight: lighter;
     color: rgb(195, 195, 195);
     margin-top: 5px;
 }
 
-.cardi-image {
+.card-i-image {
     height: 180px;
 }
 
-.containeri {
+.container-i {
     padding: 20px;
     margin: 0 auto;
 }
