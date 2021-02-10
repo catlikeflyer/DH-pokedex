@@ -14,11 +14,11 @@ const showButtons = () => {
     
     types.forEach(type => {
         btnArray.push(`
-        <button class="btni" onclick="filterSelection('${type}')">${type}</button>
+        <button class="btn-i" onclick="filterSelection('${type}')">${type}</button>
         `)
     })
 
-    btnContainer.innerHTML = `<button class="btni active" onclick="filterSelection('all')">Show all</button>
+    btnContainer.innerHTML = `<button class="btn-i active" onclick="filterSelection('all')">Show all</button>
     `+btnArray.join("");
 }
 

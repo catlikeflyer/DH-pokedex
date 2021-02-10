@@ -104,22 +104,23 @@ h6 {
   }
   
   /* Style the buttons */
-  .btni {
+  .btn-i {
     border: none;
     outline: none;
     padding: 12px 16px;
     background-color: rgb(204, 249, 253);
     cursor: pointer;
     margin: 5px;
+    border-radius: 5px;
   }
   
   /* Add a light grey background on mouse-over */
-  .btni:hover {
+  .btn-i:hover {
     background-color: rgb(97, 205, 255);
   }
   
   /* Add a dark background to the active button */
-  .btni.active {
+  .btn-i.active {
     background-color: rgb(101, 142, 255);
     color: white;
   }
