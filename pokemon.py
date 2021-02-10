@@ -4,12 +4,20 @@ import json
 URL = "https://pokeapi.co/api/v2/pokemon"
 
 def load_pokemon_info(pokemon: str):
+    """
+    Fetches PokeAPI for the clicked pokemon's data
+    Returns a json as dictionary
+    """
     call = requests.get(URL+"/"+pokemon)
     data = json.loads(call.text)
 
     return data
 
 class Pokemon:
+    """
+    Pokemon object that has its properties defined by 
+    the data obtained from load_pokemon_info.
+    """
     def __init__(self, pokemon):
         self.data = load_pokemon_info(pokemon)
         self.name = self.data['species']['name']
@@ -23,6 +31,11 @@ class Pokemon:
         self.icon = self.data["sprites"]["versions"]["generation-vii"]["icons"]["front_default"] 
 
     def get_stats(self):
+        """
+        Method to retrieve the stats of the object.
+
+        Returns a dictionary with stats:value pairs.
+        """
         self.total_stats = 0
         self.stats = {}
         self.max_stat = 0

@@ -53,11 +53,11 @@ const fetchAllPokemon = () => {
  */
 const displayPokemon = (pokemon) => {
     const pokemonHTML = pokemon.map(mon => `
-    <a href="${mon.name}" class="cardi show ${mon.types.join(' ')}">
+    <a href="${mon.name}" class="card-i show ${mon.types.join(' ')}">
     <li>
-        <img class="cardi-image" src="${mon.image}"/>
-        <h2 class="cardi-title">${mon.id}. ${mon.name}</h2>
-        <p class="cardi-subtitle">Types: ${mon.types.join(', ')}</p>
+        <img class="card-i-image" src="${mon.image}"/>
+        <h2 class="card-i-title">${mon.id}. ${mon.name}</h2>
+        <p class="card-i-subtitle">Types: ${mon.types.join(', ')}</p>
     </li>
     </a>
     `).join("");
