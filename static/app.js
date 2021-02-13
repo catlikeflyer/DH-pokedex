@@ -32,7 +32,18 @@ const fetchAllPokemon = () => {
 
     // Set i condition to 898 to get all pokemon up to Gen 8
     for (let i = 1; i <= 898; i++){
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        // Emergency fix for PokeApi error
+        let url = ""
+        if (i == 55) {
+            url = `https://pokeapi.co/api/v2/pokemon/golduck`; 
+        } else if (i == 457) {
+            url = `https://pokeapi.co/api/v2/pokemon/lumineon`;
+        } else if (i == 771) {
+            url = `https://pokeapi.co/api/v2/pokemon/pyukumuku`;
+        } else {
+            url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        } // End of fix
+        //const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         promises.push(fetch(url).then((res) => res.json()));
         Promise.all(promises).then(results => {
             const pokemon = results.map((data) => ({
