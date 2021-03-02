@@ -36,11 +36,10 @@ const fetchAllPokemon = () => {
         let url = ""
         if (i == 322) {
             url = `https://pokeapi.co/api/v2/pokemon/numel`; 
-        } else if (i == 457) {
-            url = `https://pokeapi.co/api/v2/pokemon/lumineon`;
-        } else if (i == 771) {
-            url = `https://pokeapi.co/api/v2/pokemon/pyukumuku`;
-        } else {
+        } else if (i == 151) {
+            url = `https://pokeapi.co/api/v2/pokemon/mew`;
+        }    
+        else {
             url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         } // End of fix
         //const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
