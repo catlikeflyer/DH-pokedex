@@ -34,8 +34,8 @@ const fetchAllPokemon = () => {
     for (let i = 1; i <= 898; i++){
         // Emergency fix for PokeApi error
         let url = ""
-        if (i == 55) {
-            url = `https://pokeapi.co/api/v2/pokemon/golduck`; 
+        if (i == 322) {
+            url = `https://pokeapi.co/api/v2/pokemon/numel`; 
         } else if (i == 457) {
             url = `https://pokeapi.co/api/v2/pokemon/lumineon`;
         } else if (i == 771) {
